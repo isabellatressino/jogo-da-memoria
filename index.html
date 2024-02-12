@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Memory Game</title>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/236f7dfd45.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<header>
+			<div class="logo">Memory Game</div>
+			<div class="icons">
+				<i class="fa-solid fa-circle-pause" id="pause"></i>
+				<i class="fa-solid fa-circle-info" id="info"></i>
+			</div>
+		</header>
+
+		<main>
+			<section class="info">
+				<i class="fa-solid fa-xmark"></i>
+				<div>
+					<h2>How to play</h2>
+					<p>
+						Click on two cards to see if they match. Your goal is to find pairs
+						of matching cards in the shortest time possible and with the fewest
+						number of moves. Challenge your memory and enjoy this stimulating
+						game! Good luck!
+					</p>
+				</div>
+				<div>
+					<h2>Credits</h2>
+					<p>
+						All images by
+						<a href="https://br.freepik.com/autor/catalyststuff" target="_blank"
+							>@catalyststuff</a
+						>
+						on Freepik.
+					</p>
+					<p>
+						Designed and created by
+						<a href="https://github.com/isabellatressino" target="_blank"
+							>Isabella Tressino</a
+						>.
+					</p>
+				</div>
+			</section>
+
+			<section class="start">
+				<img src="images/brain-remove-bg.png" alt="" />
+				<h1>Memory Game</h1>
+				<button id="play">PLAY</button>
+			</section>
+
+			<section class="cards"></section>
+
+			<section class="pause">
+				<h2>PAUSE</h2>
+				<button id="exit">EXIT GAME</button>
+				<button id="continue">CONTINUE</button>
+			</section>
+
+			<section class="win">
+				<h2>
+					Congratulations! <br />
+					You Won!
+				</h2>
+				<div><img src="images/dragon-win.png" alt="" /></div>
+				<button>EXIT</button>
+				<button>PLAY AGAIN</button>
+			</section>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
+</html>
