@@ -85,7 +85,7 @@ const compareCards = (c1, c2) => {
     setTimeout(() => {
       card1 = "";
       card2 = "";
-    }, 1500);
+    }, 1000);
   }
 
   numMoves++;
