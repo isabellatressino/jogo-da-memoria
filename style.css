@@ -3,109 +3,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
 
 :root {
-	--font: "Roboto", sans-serif;
-	--font2: "Titan One", sans-serif;
+  --font: "Roboto", sans-serif;
+  --font2: "Titan One", sans-serif;
 
-	--background: #f3e0ec;
-	--dark-purple: #210d52;
-	--pink: #fe52a8;
-	--purple: #2f1076;
-	--soft-blue: #80b4ff;
-	--violet: #8461d6;
+  --background: #f3e0ec;
+  --dark-purple: #210d52;
+  --pink: #fe52a8;
+  --purple: #2f1076;
+  --soft-blue: #80b4ff;
+  --violet: #8461d6;
 }
 
 /* Configurações gerais */
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-	font: 1.6rem var(--font);
-	background-color: var(--background);
-	min-height: 100vh;
+  font: 1.6rem var(--font);
+  background-color: var(--background);
+  min-height: 100vh;
 
-	position: relative;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 10% 90%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 90%;
 }
 
 header {
-	width: 100%;
-	padding: 3rem;
+  width: 100%;
+  padding: 3rem;
 
-	display: flex;
-	justify-content: space-between;
-	gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	align-self: center;
-	height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  height: 100%;
 }
 
 section {
-	justify-self: center;
-	max-height: 100%;
+  justify-self: center;
+  max-height: 100%;
 }
 
 img {
-	width: 100%;
+  width: 100%;
 }
 
 button,
 i {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 button {
-	font: 1.8rem var(--font2);
-	color: var(--dark-purple);
-	letter-spacing: 1px;
+  font: 1.8rem var(--font2);
+  color: var(--dark-purple);
+  letter-spacing: 1px;
 
-	width: 100%;
-	margin-top: 30px;
+  width: 100%;
+  margin-top: 30px;
 
-	padding: 15px 10px;
-	background-color: var(--pink);
-	border: 4px solid var(--purple);
-	border-radius: 25px;
+  padding: 15px 10px;
+  background-color: var(--pink);
+  border: 4px solid var(--purple);
+  border-radius: 25px;
 
-	transition: transform 0.3s;
+  transition: transform 0.3s;
 }
 
 button:active {
-	transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 i {
-	font-size: 2.5rem;
-	color: var(--dark-purple);
-	transition: color 1s;
+  font-size: 2.5rem;
+  color: var(--dark-purple);
+  transition: color 1s;
 }
 
 i:hover {
-	color: var(--violet);
+  color: var(--violet);
 }
 
 i:active {
-	transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 h2 {
-	font: 2.5rem var(--font2);
-	color: var(--purple);
+  font: 2.5rem var(--font2);
+  color: var(--purple);
 }
 
 /* Configurações específicas */
@@ -113,299 +113,299 @@ h2 {
 /** header **/
 
 .logo {
-	font-family: var(--font2);
-	color: var(--dark-purple);
+  font-family: var(--font2);
+  color: var(--dark-purple);
 }
 
 .logo::before {
-	content: url(images/brain-icon.png);
-	vertical-align: middle;
-	margin-right: 5px;
+  content: url(images/brain-icon.png);
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .icons {
-	display: flex;
-	gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 #pause {
-	display: none;
-	animation: surgirIcons 1s;
+  display: none;
+  animation: surgirIcons 1s;
 }
 
 .temp {
-	font: 2rem var(--font2);
-	color: var(--dark-purple);
-	display: flex;
-	gap: 25px;
-	opacity: 0;
-	transform: opacity 1s;
+  font: 2rem var(--font2);
+  color: var(--dark-purple);
+  display: flex;
+  gap: 25px;
+  opacity: 0;
+  transform: opacity 1s;
 }
 
 #timer {
-	width: 50px;
+  width: 50px;
 }
 
 /** section info **/
 
 .info {
-	position: absolute;
-	width: 400px;
-	padding: 50px 40px;
-	z-index: 3;
+  position: absolute;
+  width: 400px;
+  padding: 50px 40px;
+  z-index: 3;
 
-	background-color: var(--soft-blue);
-	border: 4px solid var(--purple);
-	border-radius: 15px;
+  background-color: var(--soft-blue);
+  border: 4px solid var(--purple);
+  border-radius: 15px;
 
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 
-	animation: surgir 0.5s forwards;
+  animation: surgir 0.5s forwards;
 }
 
 .fa-xmark {
-	position: absolute;
-	top: 20px;
-	right: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .info h2 {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .info p {
-	color: var(--dark-purple);
-	margin-top: 5px;
-	text-align: justify;
+  color: var(--dark-purple);
+  margin-top: 5px;
+  text-align: justify;
 }
 
 .info a {
-	font-weight: bolder;
-	color: var(--purple);
-	text-decoration: none;
+  font-weight: bolder;
+  color: var(--purple);
+  text-decoration: none;
 
-	transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 .info a:hover {
-	color: var(--violet);
+  color: var(--violet);
 }
 
 /** section start **/
 
 .start {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .start img {
-	width: 50%;
+  width: 50%;
 }
 
 .start h1 {
-	font: 2.5rem var(--font2);
-	color: var(--dark-purple);
+  font: 2.5rem var(--font2);
+  color: var(--dark-purple);
 }
 
 /** section cards **/
 
 .cards {
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	gap: 15px;
-	width: 90%;
-	max-width: 1000px;
-	transform: scale(0);
-	padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  width: 90%;
+  max-width: 1000px;
+  transform: scale(0);
+  padding: 5px;
 }
 
 .card-container {
-	position: relative;
+  position: relative;
 
-	width: 100%;
-	aspect-ratio: 3/4;
+  width: 100%;
+  aspect-ratio: 3/4;
 
-	border-radius: 10px;
-	cursor: pointer;
+  border-radius: 10px;
+  cursor: pointer;
 
-	transform-style: preserve-3d;
-	transition: transform 1.5s;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
 }
 
 .card {
-	position: absolute;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 
-	border-radius: 10px;
-	box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
 }
 
 .front {
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .back {
-	background: var(--soft-blue) url(images/brain.jpg) center center/contain
-		no-repeat;
+  background: var(--soft-blue) url(images/brain.jpg) center center/contain
+    no-repeat;
 
-	border: 4px solid var(--purple);
-	backface-visibility: hidden;
+  border: 4px solid var(--purple);
+  backface-visibility: hidden;
 }
 
 .clicked {
-	/* efeito de cartas girando */
-	transform: rotateY(180deg);
+  /* efeito de cartas girando */
+  transform: rotateY(180deg);
 }
 
 .disabled {
-	/* cartas desabilitadas */
-	cursor: default;
+  /* cartas desabilitadas */
+  cursor: default;
 }
 
 .animation-correct-cards {
-	/*chama a animação para cartas corretas */
-	animation: correctCards 2s forwards;
+  /*chama a animação para cartas corretas */
+  animation: correctCards 2s forwards;
 }
 
 .appear-cards {
-	/* chama a animação para aparecer as cartas ao iniciar jogo novo */
-	animation: appearCards 2s forwards;
+  /* chama a animação para aparecer as cartas ao iniciar jogo novo */
+  animation: appearCards 2s forwards;
 }
 
 /** section pause **/
 
 .pause {
-	position: absolute;
-	width: 400px;
-	padding: 50px 40px;
-	z-index: 2;
+  position: absolute;
+  width: 400px;
+  padding: 50px 40px;
+  z-index: 2;
 
-	background-color: var(--soft-blue);
-	border: 4px solid var(--purple);
-	border-radius: 15px;
+  background-color: var(--soft-blue);
+  border: 4px solid var(--purple);
+  border-radius: 15px;
 
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas: "pause pause" "ex cont";
-	justify-items: center;
-	gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "pause pause" "ex cont";
+  justify-items: center;
+  gap: 20px;
 
-	animation: surgir 0.5s forwards;
+  animation: surgir 0.5s forwards;
 }
 
 .pause h2 {
-	grid-area: pause;
+  grid-area: pause;
 }
 
 /** section win **/
 
 .win {
-	position: absolute;
-	width: 450px;
-	padding: 50px 40px;
-	z-index: 2;
+  position: absolute;
+  width: 450px;
+  padding: 50px 40px;
+  z-index: 2;
 
-	background-color: var(--soft-blue);
-	border: 4px solid var(--purple);
-	border-radius: 15px;
+  background-color: var(--soft-blue);
+  border: 4px solid var(--purple);
+  border-radius: 15px;
 
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	justify-items: center;
-	gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 20px;
 
-	animation: surgir 3s;
+  animation: surgir 3s;
 }
 
 .win h2 {
-	text-align: center;
-	grid-column: 1 / 3;
+  text-align: center;
+  grid-column: 1 / 3;
 }
 
 .win div {
-	grid-column: 1 / 3;
-	width: 80%;
-	position: relative;
-	overflow: hidden;
+  grid-column: 1 / 3;
+  width: 80%;
+  position: relative;
+  overflow: hidden;
 
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .win img {
-	width: 180px;
-	animation: jump 2s infinite;
+  width: 180px;
+  animation: jump 2s infinite;
 }
 
 .win div::before {
-	content: "";
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	left: 10px;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 10px;
 
-	background-image: url(images/balloon-pink.png);
-	background-size: cover;
+  background-image: url(images/balloon-pink.png);
+  background-size: cover;
 
-	animation: subirBalao 10s linear forwards infinite;
+  animation: subirBalao 10s linear forwards infinite;
 }
 
 .win div::after {
-	content: "";
-	position: absolute;
-	width: 100px;
-	height: 100px;
-	right: 10px;
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 10px;
 
-	background-image: url(images/balloon-blue.png);
-	background-size: cover;
+  background-image: url(images/balloon-blue.png);
+  background-size: cover;
 
-	transform: rotateY(180deg) translateY(200%);
-	animation: subirBalao 10s linear forwards 2s infinite;
+  transform: rotateY(180deg) translateY(200%);
+  animation: subirBalao 10s linear forwards 2s infinite;
 }
 
 /* classes javascript */
 
 .img-animation {
-	/* chama a animação que faz a imagem crescer */
-	transform: scale(0);
-	animation: grow 3s 0.5s forwards;
+  /* chama a animação que faz a imagem crescer */
+  transform: scale(0);
+  animation: grow 3s 0.5s forwards;
 }
 
 .title-animation {
-	/* chama a animação do título  */
-	opacity: 0;
-	height: 0;
-	overflow: hidden;
-	animation: appearTitle 2s 4s forwards;
+  /* chama a animação do título  */
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  animation: appearTitle 2s 4s forwards;
 }
 
 .opacity-animation {
-	/* chama a animação que altera a opacidade */
-	opacity: 0;
-	cursor: default;
-	animation: opacity 3s 6s forwards;
+  /* chama a animação que altera a opacidade */
+  opacity: 0;
+  cursor: default;
+  animation: opacity 3s 6s forwards;
 }
 
 .jump-animation {
-	/* chama a animação que faz o efeito da imagem estar pulando */
-	animation: jump 3s ease-in-out infinite;
+  /* chama a animação que faz o efeito da imagem estar pulando */
+  animation: jump 3s ease-in-out infinite;
 }
 
 .gradient:hover {
-	/* chama a animação do gradiente quando passado o mouse pelo botão */
-	background: linear-gradient(90deg, var(--pink), var(--purple), var(--pink));
-	background-size: 500%;
-	animation: gradient 25s linear infinite;
+  /* chama a animação do gradiente quando passado o mouse pelo botão */
+  background: linear-gradient(90deg, var(--pink), var(--purple), var(--pink));
+  background-size: 500%;
+  animation: gradient 25s linear infinite;
 }
 
 /* animações */
@@ -413,109 +413,109 @@ h2 {
 /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
 
 @keyframes surgirIcons {
-	/* animação que faz os icones surgirem */
-	from {
-		transform: translateX(100%);
-	}
+  /* animação que faz os icones surgirem */
+  from {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes correctCards {
-	/* animação para cartas corretas */
-	0% {
-		transform: scale(1);
-		opacity: 1;
-	}
-	50% {
-		transform: scale(1.05);
-		opacity: 1;
-	}
-	75% {
-		transform: scale(1);
-		opacity: 1;
-	}
-	100% {
-		opacity: 0.5;
-		box-shadow: none;
-	}
+  /* animação para cartas corretas */
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+    box-shadow: none;
+  }
 }
 
 @keyframes appearCards {
-	/* animação para aparecer as cartas ao iniciar jogo novo */
-	100% {
-		transform: scale(1);
-	}
+  /* animação para aparecer as cartas ao iniciar jogo novo */
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes grow {
-	/* animação que faz a imagem crescer */
-	0% {
-		transform: scale(0);
-	}
-	50% {
-		transform: scale(2);
-	}
-	100% {
-		transform: scale(1);
-	}
+  /* animação que faz a imagem crescer */
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes appearTitle {
-	/* animação do título  */
-	100% {
-		opacity: 1;
-		height: 28px;
-	}
+  /* animação do título  */
+  100% {
+    opacity: 1;
+    height: 28px;
+  }
 }
 
 @keyframes opacity {
-	/* animação que altera a opacidade */
-	100% {
-		opacity: 1;
-	}
+  /* animação que altera a opacidade */
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes jump {
-	/* animação que faz o efeito da imagem estar pulando */
-	0% {
-		transform: translateY(0px);
-	}
-	50% {
-		transform: translateY(-10px);
-	}
-	100% {
-		transform: translateY(0px);
-	}
+  /* animação que faz o efeito da imagem estar pulando */
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes gradient {
-	/* animação do gradiente quando passado o mouse pelo botão */
-	0% {
-		background-position: 0%;
-	}
-	100% {
-		background-position: 500%;
-	}
+  /* animação do gradiente quando passado o mouse pelo botão */
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 @keyframes surgir {
-	/* animação que faz uma seção aparecer */
-	0% {
-		transform: scale(0.8);
-	}
-	100% {
-		transform: scale(1);
-	}
+  /* animação que faz uma seção aparecer */
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes subirBalao {
-	/* animação que faz os balões subirem */
-	0% {
-		transform: rotateY(180deg) translateY(200%);
-	}
-	100% {
-		transform: rotateY(180deg) translateY(-100%);
-		display: none;
-	}
+  /* animação que faz os balões subirem */
+  0% {
+    transform: rotateY(180deg) translateY(200%);
+  }
+  100% {
+    transform: rotateY(180deg) translateY(-100%);
+    display: none;
+  }
 }
 
 /* MEDIA QUERIES */
@@ -523,71 +523,70 @@ h2 {
 /* 2 3 4 6 8 12 */
 
 @media screen and (max-width: 480px) {
-	header {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
-	}
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 
-	.logo {
-		font-size: 1rem;
-	}
+  .logo {
+    font-size: 1rem;
+  }
 
-	.icons {
-		grid-column: 2/3;
-		grid-row: 1/2;
-		justify-self: end;
-	}
+  .icons {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+  }
 
-	.temp {
-		grid-column: 1 / 3;
-		justify-self: end;
-	}
+  .temp {
+    grid-column: 1 / 3;
+    justify-self: end;
+  }
 
-	main {
-		height: 100%;
-	}
+  main {
+    height: 100%;
+  }
 
-	.cards {
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(6, 1fr);
-		width: 90vw;
-		max-height: auto;
-		max-width: none;
-	}
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 90vw;
+    max-height: auto;
+    max-width: none;
+  }
 
-	.win,
-	.info,
-	.pause {
-		width: 90%;
-	}
+  .win,
+  .info,
+  .pause {
+    width: 90%;
+  }
 
-	.win div {
-		width: 100%;
-		background-color: pink;
-	}
+  .win div {
+    width: 100%;
+  }
 
-	.win img {
-		width: 150px;
-	}
+  .win img {
+    width: 150px;
+  }
 
-	.win div::before,
-	.win div::after {
-		width: 70px;
-		height: 70px;
-	}
+  .win div::before,
+  .win div::after {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-	main {
-		height: 100%;
-	}
+  main {
+    height: 100%;
+  }
 
-	.cards {
-		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(4, 1fr);
-		width: 90vw;
-		max-height: 80vh;
-		max-width: none;
-	}
+  .cards {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 90vw;
+    max-height: 80vh;
+    max-width: none;
+  }
 }
