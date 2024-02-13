@@ -34,7 +34,7 @@ git clone https://github.com/isabellatressino/jogo-da-memoria.git
 
     **ou**
 
-    Acesse o [Jogo da Memória Online]() para experimentar diretamente no seu navegador.
+    Acesse o [Jogo da Memória Online](https://isabellatressino.github.io/jogo-da-memoria/) para experimentar diretamente no seu navegador.
 
 3. Jogue:
 - Clique em duas cartas para virá-las.
