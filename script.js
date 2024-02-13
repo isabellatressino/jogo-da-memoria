@@ -25,6 +25,10 @@ const [sectionInfo, sectionStart, sectionCards, sectionPause, sectionWin] =
 
 const [iconPause, iconInfo, iconExitInfo] = document.querySelectorAll("i");
 
+const divTemporizador = document.querySelector(".temp");
+
+const timer = document.querySelector("#timer");
+
 // Inicializações
 
 sectionInfo.style.display = "none";
@@ -33,6 +37,10 @@ sectionWin.style.display = "none";
 
 let card1 = "";
 let card2 = "";
+let segundos = 0;
+let minutos = 0;
+let interval;
+let numMoves = 0;
 
 // Função que checa se o jogo acabou
 
@@ -52,6 +60,7 @@ const checkEndGame = () => {
 		setTimeout(() => {
 			sectionWin.style.display = "grid";
 		}, 3000);
+		clearInterval(interval);
 	}
 };
 
@@ -71,10 +80,14 @@ const compareCards = (c1, c2) => {
 		setTimeout(() => {
 			c1.classList.remove("clicked");
 			c2.classList.remove("clicked");
+		}, 2000);
+		setTimeout(() => {
 			card1 = "";
 			card2 = "";
-		}, 2000);
+		}, 1500);
 	}
+	numMoves++;
+	displayMoves(numMoves);
 };
 
 // Função que controla a jogada e efeitos
@@ -91,7 +104,7 @@ const revealCard = (card) => {
 	}
 };
 
-// Função que cria as cartas do jogo
+//Função que cria as cartas do jogo
 const createCards = (animal) => {
 	const sectionCards = document.querySelector(".cards");
 	const card = document.createElement("div");
@@ -121,6 +134,32 @@ const shuffleArray = (arr) => {
 	return arr;
 };
 
+// Função de display do numero de jogadas
+const displayMoves = (num) => {
+	const moves = document.querySelector("#moves");
+	moves.textContent = `${num} moves`;
+};
+
+// Função de display do cronometro
+const displayTimer = (s, min, temp) =>
+	(temp.textContent = `${min.toString().length === 1 ? `0` + min : min}:${
+		s.toString().length === 1 ? `0` + s : s
+	}`);
+
+// Função que inicia o cronometro
+const initCronometer = () => {
+	interval = setInterval(() => {
+		segundos++;
+
+		if (segundos === 60) {
+			segundos = 0;
+			minutos++;
+		}
+
+		displayTimer(segundos, minutos, timer);
+	}, 1000);
+};
+
 // Função que inicia o jogo
 const initGame = (array) => {
 	const duplicateArray = [...array, ...array];
@@ -128,6 +167,19 @@ const initGame = (array) => {
 	shuffledArray.forEach((element) => createCards(element));
 	iconPause.style.display = "block";
 	sectionCards.classList.add("appear-cards");
+
+	divTemporizador.classList.add("opacity-animation");
+	divTemporizador.style.animationDuration = "1s";
+	divTemporizador.style.animationDelay = "0s";
+	timer.classList.add("opacity-animation");
+	timer.style.animationDuration = "1s";
+	timer.style.animationDelay = "0s";
+
+	setTimeout(() => {
+		initCronometer();
+		displayMoves(numMoves);
+	}, 1000);
+
 };
 
 // Evento para o botão de jogar
@@ -156,12 +208,14 @@ iconPause.addEventListener("click", () => {
 	sectionPause.style.display = "grid";
 	sectionStart.style.opacity = ".5";
 	sectionCards.style.opacity = ".5";
+	clearInterval(interval);
 });
 
 btnContinue.addEventListener("click", () => {
 	sectionPause.style.display = "none";
 	sectionStart.style.opacity = "1";
 	sectionCards.style.opacity = "1";
+	initCronometer();
 });
 
 btnExit.addEventListener("click", () => {
@@ -179,6 +233,11 @@ btnPlayAgain.addEventListener("click", () => {
 	cards.forEach((card) => sectionCards.removeChild(card));
 	sectionWin.style.display = "none";
 	initGame(animals);
+	segundos = 0;
+	minutos = 0;
+	numMoves = 0;
+	displayTimer(0, 0, timer);
+	displayMoves(numMoves);
 });
 
 // Evento de inicialização ao carregar o DOM
